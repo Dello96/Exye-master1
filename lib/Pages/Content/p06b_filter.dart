@@ -125,19 +125,21 @@ class FilterOverlay extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            alignment: Alignment.center,
-            width: 150,
-            height: 50,
-            decoration: BoxDecoration(
-              color: app.mResource.colours.black,
-              borderRadius: BorderRadius.circular(25),
-              border: Border.all(
-                width: 1
-              )
-            ),
-            child: Text(app.mResource.strings.bConfirmChoices2,
-            style: app.mResource.fonts.bold14w
+          GestureDetector(
+            child: Container(
+              alignment: Alignment.center,
+              width: 150,
+              height: 50,
+              decoration: BoxDecoration(
+                color: app.mResource.colours.black,
+                borderRadius: BorderRadius.circular(25),
+                border: Border.all(
+                  width: 1
+                )
+              ),
+              child: Text(app.mResource.strings.bConfirmChoices2,
+              style: app.mResource.fonts.bold14w
+              ),
             ),
           ),
         ],
@@ -145,6 +147,50 @@ class FilterOverlay extends StatelessWidget {
     );
   }
 }
+
+class CustomMiniButton extends StatefulWidget {
+  bool active;
+  CustomMiniButton({this.active = true, Key? key}) : super(key: key);
+
+  @override
+  State<CustomMiniButton> createState() => _CustomMiniButtonState();
+}
+
+class _CustomMiniButtonState extends State<CustomMiniButton> {
+  bool _pressed2 = false;
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        if (widget.active) {
+          setState(
+              () {
+                _pressed2 = true;
+              }
+          );
+        }
+      },
+      child: GestureDetector(
+        child: Container(
+          alignment: Alignment.center,
+          width: 150,
+          height: 50,
+          decoration: BoxDecoration(
+              color: app.mResource.colours.black,
+              borderRadius: BorderRadius.circular(25),
+              border: Border.all(
+                  width: 1
+              )
+          ),
+          child: Text(app.mResource.strings.bConfirmChoices2,
+              style: app.mResource.fonts.bold14w
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 
 class CategoryView extends StatefulWidget {
   CategoryView({Key? key}) : super(key: key);
