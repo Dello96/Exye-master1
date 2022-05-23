@@ -10,6 +10,7 @@ import 'package:exye_app/Widgets/custom_textbox.dart';
 import 'package:exye_app/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:exye_app/Data/categoryname.dart';
 
 class FilterOverlay extends StatelessWidget {
   const FilterOverlay({Key? key}) : super(key: key);
@@ -17,16 +18,17 @@ class FilterOverlay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
+      padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
       child: Column(
         children: [
           Container(
+            margin: EdgeInsets.fromLTRB(5, 0, 0, 0),
             alignment: Alignment.topLeft,
             child: Text(app.mResource.strings.cFilterTitle,
             style: app.mResource.fonts.bold14),
           ),
           Container(
-            height: 10,
+            height: 15,
           ),
           Expanded(
             child: Row(
@@ -36,9 +38,10 @@ class FilterOverlay extends StatelessWidget {
                   children: [
                     Container(
                       alignment: Alignment.center,
-                      child: Text(app.mResource.strings.lGender),
+                      child: Text(app.mResource.strings.lGender,
+                      style: app.mResource.fonts.filter12),
                     ),
-                    CustomSizedDivider(40, thickness: 2),
+                    CustomSizedDivider(45, thickness: 1),
                     Container(
                       height: 40,
                       width: 40,
@@ -49,23 +52,23 @@ class FilterOverlay extends StatelessWidget {
                       ),
                       alignment: Alignment.center,
                       child: Text(app.mResource.strings.lFemale,
-                      style: TextStyle(
-                        color: app.mResource.colours.fontWhite
-                      ),),
+                      style: app.mResource.fonts.filter13),
                     ),
                     Container(
                       height: 40,
                       width: 40,
                       margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          border: Border.all(
-                            color: app.mResource.colours.black,
-                            width: 1
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(
+                          color: app.mResource.colours.black,
+                          width: 1
                         )
                       ),
                       alignment: Alignment.center,
-                      child: Text(app.mResource.strings.lMale),
+                      child: Text(app.mResource.strings.lMale,
+                          style: app.mResource.fonts.filter12
+                      ),
                     ),
                   ],
                 ),
@@ -73,9 +76,10 @@ class FilterOverlay extends StatelessWidget {
                   children: [
                     Container(
                       alignment: Alignment.center,
-                      child: Text(app.mResource.strings.lProducts),
+                      child: Text(app.mResource.strings.lProducts,
+                          style: app.mResource.fonts.filter12),
                     ),
-                    CustomSizedDivider(40, thickness: 2),
+                    CustomSizedDivider(45, thickness: 1),
                     Container( //의류
                       height: 40,
                       width: 40,
@@ -86,9 +90,7 @@ class FilterOverlay extends StatelessWidget {
                       ),
                       alignment: Alignment.center,
                       child: Text(app.mResource.strings.cFilterClothes,
-                        style: TextStyle(
-                          color: app.mResource.colours.fontWhite
-                        ),),
+                        style: app.mResource.fonts.filter13),
                     ),
                     Container( //가방
                       height: 40,
@@ -102,132 +104,92 @@ class FilterOverlay extends StatelessWidget {
                           )
                       ),
                       alignment: Alignment.center,
-                      child: Text(app.mResource.strings.cFilterBag),
+                      child: Text(app.mResource.strings.cFilterBag,
+                          style: app.mResource.fonts.filter12),
                     ),
                   ],
                 ),
-                Column(
-                  children: [
-                    Container(
-                      alignment: Alignment.center,
-                      child: Text(app.mResource.strings.lStyle),
-                    ),
-                    CustomSizedDivider(200, thickness: 2),
-                    Row(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 40,
-                                width: 120,
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: app.mResource.colours.black
-                                  ),
-                                  borderRadius: BorderRadius.all(Radius.circular(20))
-                                ),
-                                alignment: Alignment.center,
-                                child: Text(app.mResource.strings.cFiltertop),
-                              ),
-                              Container(
-                                height: 40,
-                                width: 120,
-                                margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    border: Border.all(
-                                        color: app.mResource.colours.black,
-                                        width: 1
-                                    )
-                                ),
-                                alignment: Alignment.center,
-                                child: Text(app.mResource.strings.cFilterpolo),
-                              ),
-                              Container(
-                                height: 40,
-                                width: 120,
-                                margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    border: Border.all(
-                                        color: app.mResource.colours.black,
-                                        width: 1
-                                    )
-                                ),
-                                alignment: Alignment.center,
-                                child: Text(app.mResource.strings.cFilterknit),
-                              ),
-                              Container(
-                                height: 40,
-                                width: 120,
-                                margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    border: Border.all(
-                                        color: app.mResource.colours.black,
-                                        width: 1
-                                    )
-                                ),
-                                alignment: Alignment.center,
-                                child: Text(app.mResource.strings.cFilterjacket),
-                              ),
-                              Container(
-                                height: 40,
-                                width: 120,
-                                margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    border: Border.all(
-                                        color: app.mResource.colours.black,
-                                        width: 1
-                                    )
-                                ),
-                                alignment: Alignment.center,
-                                child: Text(app.mResource.strings.cFiltervest),
-                              ),
-                              Container(
-                                height: 40,
-                                width: 120,
-                                margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    border: Border.all(
-                                        color: app.mResource.colours.black,
-                                        width: 1
-                                    )
-                                ),
-                                alignment: Alignment.center,
-                                child: Text(app.mResource.strings.cFiltershirt),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Column(
-                          children: [
-                            Container(),
-                            Container(),
-                            Container(),
-                            Container(),
-                            Container(),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
+                Expanded(
+                  child: Column(
+                    children: [
+                      Container(
+                        alignment: Alignment.center,
+                        child: Text(app.mResource.strings.lStyle,
+                            style: app.mResource.fonts.filter12),
+                      ),
+                      CustomSizedDivider(240, thickness: 1),
+                      Expanded(child: CategoryView())
+                    ],
+                  ),
                 ),
               ],
             ),
           ),
           Container(
-            width: 400,
+            alignment: Alignment.center,
+            width: 150,
             height: 50,
-            color: Colors.black,
-            child: Text(app.mResource.strings.bConfirmChoices2),
+            decoration: BoxDecoration(
+              color: app.mResource.colours.black,
+              borderRadius: BorderRadius.circular(25),
+              border: Border.all(
+                width: 1
+              )
+            ),
+            child: Text(app.mResource.strings.bConfirmChoices2,
+            style: app.mResource.fonts.bold14w
+            ),
           ),
         ],
       ),
     );
+  }
+}
+
+class CategoryView extends StatefulWidget {
+  CategoryView({Key? key}) : super(key: key);
+  @override
+  State<CategoryView> createState() => _CategoryViewState();
+}
+
+class _CategoryViewState extends State<CategoryView> {
+  @override
+  Widget build(BuildContext context) {
+    return GridView.builder(
+      padding: EdgeInsets.all(5),
+      physics: NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 0,
+          mainAxisSpacing: 0,
+          childAspectRatio: 11/4,
+        ),
+        itemBuilder: (BuildContext context, int i) {
+          return Center(
+            child: Container(
+              height: 40,
+              width: 110,
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        app.mResource.colours.activeDateUnpressed,
+                        Color(0xffB2D1EA)
+                      ]),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                      color: app.mResource.colours.black,
+                      width: 1
+                  )
+              ),
+              alignment: Alignment.center,
+              child: Text(app.mCategory.categories[i],
+                  style: app.mResource.fonts.filter12),
+            ),
+          );
+        },
+        itemCount: app.mCategory.categories.length);
   }
 }

@@ -183,6 +183,15 @@ class _ListingsPageState extends State<ListingsPage> {
             Row(
               children: [
                 Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          Color(0xffB2D1EA),
+                          Color(0xffF9C2E8)
+                        ])
+                  ),
                   margin: const EdgeInsets.fromLTRB(10, 0, 15, 0),
                   height: 105,
                   width: 75,

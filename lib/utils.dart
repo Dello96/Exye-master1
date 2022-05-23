@@ -1,3 +1,4 @@
+import 'package:exye_app/Data/categoryname.dart';
 import 'package:exye_app/Data/data_manager.dart';
 import 'package:exye_app/Manager/app_manager.dart';
 import 'package:exye_app/Overlay/overlay_manager.dart';
@@ -10,6 +11,7 @@ class SystemManager {
   PageManager mPage = PageManager();
   OverlayManager mOverlay = OverlayManager();
   ResourceManager mResource = ResourceManager();
+  CategoryManager mCategory = CategoryManager();
 }
 
 SystemManager app = SystemManager();

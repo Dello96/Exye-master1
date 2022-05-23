@@ -42,6 +42,7 @@ class FontResources {
 
 
   final TextStyle filter12 = const TextStyle(fontFamily: "Spoqa", fontSize: 12, fontWeight: FontWeight.w400, color: Color(0xff000000),);
+  final TextStyle filter13 = const TextStyle(fontFamily: "Spoqa", fontSize: 12, fontWeight: FontWeight.w400, color: Color(0xffffffff),);
 
   final TextStyle sizeButtons = const TextStyle(fontFamily: "Spoqa", fontSize: 13, fontWeight: FontWeight.w500, color: Color(0xff000000),);
   final TextStyle sizeInactive = const TextStyle(fontFamily: "Spoqa", fontSize: 13, fontWeight: FontWeight.w500, color: Color(0x88000000),);
@@ -68,9 +69,10 @@ class FontResources {
 
   //buttons
   final TextStyle bWhite = const TextStyle(fontFamily: "Spoqa", fontSize: 16, fontWeight: FontWeight.w500, color: Color(0xffffffff));
-  final TextStyle bold16 = const TextStyle(fontFamily: "Spoqa", fontSize: 12, fontWeight: FontWeight.w500, color: Color(0xff000000), letterSpacing: 1.25);
+  final TextStyle bold16 = const TextStyle(fontFamily: "Spoqa", fontSize: 16, fontWeight: FontWeight.w500, color: Color(0xff000000), letterSpacing: 1.25);
   final TextStyle bold14 = const TextStyle(fontFamily: "Spoqa", fontSize: 14, fontWeight: FontWeight.w500, color: Color(0xff000000), letterSpacing: 1.00);
-  final TextStyle bWhite16 = const TextStyle(fontFamily: "Spoqa", fontSize: 12, fontWeight: FontWeight.w500, color: Color(0xffffffff), letterSpacing: 1.25);
+  final TextStyle bold14w = const TextStyle(fontFamily: "Spoqa", fontSize: 14, fontWeight: FontWeight.w500, color: Color(0xffffffff), letterSpacing: 1.00);
+  final TextStyle bWhite16 = const TextStyle(fontFamily: "Spoqa", fontSize: 16, fontWeight: FontWeight.w500, color: Color(0xffffffff), letterSpacing: 1.25);
   final TextStyle inactive16 = const TextStyle(fontFamily: "Spoqa", fontSize: 16, fontWeight: FontWeight.w400, color: Color(0x88000000), letterSpacing: 1.25);
 
   //calendar

@@ -336,7 +336,9 @@ class _LandingPageState extends State<LandingPage> with SingleTickerProviderStat
         children: [
           Container(
             margin: const EdgeInsets.fromLTRB(40, 10, 40, 0),
-            child: Text(app.mResource.strings.tLanding4Title, style: app.mResource.fonts.title,),
+            child: Text(app.mResource.strings.tLanding4Title, style: app.mResource.fonts.title,
+            ),
+            alignment: Alignment.centerLeft,
           ),
           Expanded(
             child: Container(),

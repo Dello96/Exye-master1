@@ -268,7 +268,8 @@ class StringResources {
   final String tLanding1P2 = "3가지 명품상품을 선택하세요. 원하는 시간에 집에서 무료로 입어보실 수 있어요.";
   final String tLanding1P3 = "직접 만져보고 입어보는 경험 후 마음에 드시면 구매하세요. 이 모든 것을 집에서 편안하게 누리세요.";
   final String tLanding1P4 = "저희 서비스는 상품 구매 외에는 모두 무료!";
-  final String tLanding2Title = "명품을 직접 경험하고 구매하는 서비스.";
+  final String tLanding2Title = """명품을 직접 경험하고
+구매하는 서비스.""";
   final String tLanding2H1 = "1. 간편한 상품선택과 맞춤배송.";
   final String tLanding2H2 = "2. 집으로 배달되는 피팅 경험.";
   final String tLanding2H3 = "0. 집에서 무료 경험.";
@@ -286,7 +287,8 @@ class StringResources {
   final String tLanding3P2 = "회원비 무료 프로모션을 진행하고 있어요. 집에서 명품 상품을 직접 경험해 보는 서비스를 무료로 누리세요.";
   final String tLanding3P3 = "회원만 누릴 수 있는 마음에 꼭 드는 상품 가격. 한번에 3 상품 최종구매 결정시 10% 추가 할인 혜택을 드립니다.";
   final String tLanding3P4 = "회원님과 가까운 지인을 초대하세요. 성공적으로 초대 하시면 10만원의 스토어 크레딧 쿠폰이 제공 됩니다. *테이스팅 카카오채널 추가시";
-  final String tLanding4Title = "현재 브랜드 라인업. 그리고";
+  final String tLanding4Title = """현재 브랜드 라인업.
+그리고""";
   final String tLanding4H1 = "더 다양한 브랜드.";
   final String tLanding4H2 = "테이스팅은,";
   final String tLanding4P1 = "새로운 하이앤드 명품 브랜드 라인업이 준비중입니다. 기대해 주세요!";
