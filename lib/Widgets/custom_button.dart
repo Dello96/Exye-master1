@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:exye_app/utils.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CustomTextButton extends StatefulWidget {
   final String text;
@@ -813,6 +814,47 @@ class _CustomKeyboardExitButtonState extends State<CustomKeyboardExitButton> {
       child: Center(
         child: Image.asset(widget.image, width: 25, height: 25,),
       ),
+    );
+  }
+}
+
+class MyCustomWidget extends StatefulWidget {
+  Function touch;
+  Color? colorrpress1;
+  Color? colorrpress2;
+  MyCustomWidget({required this.touch, this.colorrpress1, this.colorrpress2, Key? key}) : super(key: key);
+
+  @override
+  State<MyCustomWidget> createState() => _MyCustomWidgetState();
+}
+
+class _MyCustomWidgetState extends State<MyCustomWidget> {
+  bool _pressed2 = true;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          widget.touch;
+        });
+      },
+      child: changingButton(),
+    );
+  }
+
+  Widget changingButton () {
+    return Container(
+      width: 40,
+      height: 40,
+      decoration: BoxDecoration(
+          border: Border.all(
+              color: _pressed2 ? (widget.colorrpress1 ?? app.mResource.colours.black) : (widget.colorrpress2 ?? app.mResource.colours.buttonOrange),
+              width: 1
+          ),
+          borderRadius: BorderRadius.circular(20)
+      ),
+      child: Text('계좌번호복사'),
     );
   }
 }

@@ -12,9 +12,14 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:exye_app/Data/categoryname.dart';
 
-class FilterOverlay extends StatelessWidget {
+class FilterOverlay extends StatefulWidget {
   const FilterOverlay({Key? key}) : super(key: key);
 
+  @override
+  State<FilterOverlay> createState() => _FilterOverlayState();
+}
+
+class _FilterOverlayState extends State<FilterOverlay> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -92,21 +97,10 @@ class FilterOverlay extends StatelessWidget {
                       child: Text(app.mResource.strings.cFilterClothes,
                         style: app.mResource.fonts.filter13),
                     ),
-                    Container( //가방
-                      height: 40,
-                      width: 40,
-                      margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          border: Border.all(
-                              color: app.mResource.colours.black,
-                              width: 1
-                          )
-                      ),
-                      alignment: Alignment.center,
-                      child: Text(app.mResource.strings.cFilterBag,
-                          style: app.mResource.fonts.filter12),
-                    ),
+                    MyCustomWidget(touch: () {
+                      setState(() {
+                      });
+                    })
                   ],
                 ),
                 Expanded(

@@ -119,7 +119,8 @@ class StringResources {
   final String? aNoDate = null;
   final String? aNoTime = null;
   final String aOrdered = "주문 확정";
-  final String apOrdered = "주문이 접수됬습니다. 방문 날 먼저 연락 드리겠습니다.";
+  final String apOrdered = """안전하게 배송해 드리겠습니다.
+잠시만 기다려주세요.""";
   final String aPurchased = "구매 확정";
   final String apPurchased = "구매가 정상적으로 처리됬습니다.";
   final String aEdited = "감사합니다";
@@ -354,7 +355,7 @@ class StringResources {
       return pText;
     }
     if (index == 5) {
-      pText = """ 로 연락 드릴겠습니다!""";
+      pText = """ 로 연락 드리겠습니다!""";
       return pText;
     }
     if (index == 2) {
